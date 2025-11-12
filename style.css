@@ -1,10 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
 
 :root {
-    --terminal-bg: #0a0a0a;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #00ff9f;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}    --terminal-bg: #0a0a0a;
     --terminal-green: #00ff00;
-    --terminal-green-dim: #00aa00;
-    --terminal-green-dark: #005500;
+   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #00ff9f;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+} --terminal-green-dim: #00aa00;
+
+
     --terminal-text: #00ff00;
     --terminal-gray: #1a1a1a;
     --glow: 0 0 5px rgba(0, 255, 0, 0.5);
@@ -23,6 +62,25 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
+
+/* ------------------------------
+   TERMINAL HEADER
+------------------------------ */
+.terminal-header {
+  background-color: #1b1b1b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid #00ff9f40;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
     align-items: center;
     padding: 20px;
     line-height: 1.6;
@@ -41,6 +99,243 @@ body {
 .terminal-header {
     background: var(--terminal-gray);
     padding: 10px 15px;
+/* ------------------------------
+   GLOBAL SETTINGS
+------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #00ff9f;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* ------------------------------
+   TERMINAL CONTAINER
+------------------------------ */
+.terminal-container {
+  background-color: #101010;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 0 20px #00ff9f30;
+  overflow: hidden;
+}
+
+/* ------------------------------
+   TERMINAL HEADER
+------------------------------ */
+.terminal-header {
+  background-color: #1b1b1b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid #00ff9f40;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.close { background-color: #ff5f56; }
+.minimize { background-color: #ffbd2e; }
+.maximize { background-color: #27c93f; }
+
+.terminal-title {
+  color: #ccc;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ------------------------------
+   TERMINAL CONTENT
+------------------------------ */
+.terminal-content {
+  padding: 1.5rem;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.command-line {
+  color: #00e0b0;
+  margin-bottom: 0.5rem;
+}
+
+.prompt {
+  color: #00ff9f;
+}
+
+.command {
+  color: #fff;
+}
+
+.output {
+  margin-left: 1.5rem;
+}
+
+/* ------------------------------
+   GLITCH EFFECT ON NAME
+------------------------------ */
+.glitch {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00ff9f;
+  position: relative;
+  display: inline-block;
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.3;
+  }
+}
+
+/* ------------------------------
+   TYPING TEXT EFFECT
+------------------------------ */
+.typing-text {
+  overflow: hidden;
+  border-right: 2px solid #00ff9f;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 3s steps(25, end) forwards, blink 0.8s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 220px }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.motto {
+  margin-top: 0.5rem;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* ------------------------------
+   ABOUT, SKILLS, EXPERIENCE
+------------------------------ */
+h2 {
+  color: #fff;
+  border-left: 3px solid #00ff9f;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #00ff9f;
+  margin-bottom: 0.3rem;
+}
+
+blockquote {
+  border-left: 3px solid #00ff9f60;
+  padding-left: 0.8rem;
+  margin: 0.5rem 0;
+  font-style: italic;
+  color: #aaa;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.skill-category {
+  background-color: #151515;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #00ff9f20;
+}
+
+/* Timeline */
+.timeline {
+  border-left: 2px solid #00ff9f50;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.timeline-item {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  background-color: #00ff9f;
+  border-radius: 50%;
+}
+
+.date {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Contact */
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #00ff9f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.terminal-footer {
+  border-top: 1px solid #00ff9f30;
+  padding: 1rem;
+  text-align: left;
+  color: #00ff9f;
+  font-weight: bold;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--terminal-green-dark);
